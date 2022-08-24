@@ -1,6 +1,5 @@
 package com.orazbakov.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -27,11 +26,7 @@ public class JPAConfig {
 
     Environment environment;
 
-    public JPAConfig() {
-    }
-
-    @Autowired
-    public void setEnvironment(Environment environment) {
+    public JPAConfig(Environment environment) {
         this.environment = environment;
     }
 
